@@ -4,6 +4,8 @@ import ProjectCard from "../src/components/ProjectCard";
 import Link from "next/link";
 import Button from "@mui/material/button";
 import Navbar from "../src/components/Navbar";
+import AppBar from "@mui/material/AppBar";
+import About from "../src/components/About";
 
 const headerStyle = css`
   height: 100vh;
@@ -13,7 +15,6 @@ const containerStyle = css`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
   background-color: white;
   align-items: center;
   width: 100%;
@@ -21,8 +22,9 @@ const containerStyle = css`
 
 const contentContainer = css`
   left: 10%;
-  width: 80%;
+  width: 75%;
   padding-top: 2rem;
+  height: 100vh;
 `;
 
 const projectContainer = css`
@@ -82,8 +84,11 @@ const Lab = () => {
           <span>Aspiring full-stack developer,</span>
           <span>motivated self-initiated learner,</span>
           <span>and reformed healthcare worker.</span>
-          <Link href="#projects-section" passHref>
-            <Button variant="outlined" sx={{ marginTop: 20 }}>
+          <Link href="#about-section" passHref>
+            <Button
+              variant="outlined"
+              sx={{ marginTop: 10, color: "#007c90", borderColor: "#007c90" }}
+            >
               Look around &rarr;
             </Button>
           </Link>
@@ -91,6 +96,7 @@ const Lab = () => {
         <Particles
           id="tsparticles"
           height="100vh"
+          min-height="500px"
           init={particlesInit}
           loaded={particlesLoaded}
           options={{
@@ -170,12 +176,23 @@ const Lab = () => {
           }}
         />
       </div>
-      <Navbar />
-      <div id="projects-section" css={containerStyle}>
-        <div css={contentContainer}>
-          <h1>What I've Been Working On</h1>
+
+      <div css={containerStyle}>
+        <div id="about-section" css={contentContainer}>
+          <About />
+          <Link href="#projects-section" passHref>
+            <Button
+              variant="outlined"
+              sx={{ marginTop: 10, color: "#007c90", borderColor: "#007c90" }}
+            >
+              See what I've been working on &rarr;
+            </Button>
+          </Link>
         </div>
-        {/* <Card sx={{ maxHeight: 400 }} variant="outlined">
+        <div id="projects-section" css={contentContainer}>
+          <h1>Recent Projects</h1>
+
+          {/* <Card sx={{ maxHeight: 400 }} variant="outlined">
           <CardContent>
             <Typography variant="h3" gutterBottom>
               Card component
@@ -183,22 +200,23 @@ const Lab = () => {
             <Typography variant="h5">Card stuff</Typography>
           </CardContent>
         </Card> */}
-        <div css={projectContainer}>
-          <ProjectCard>
-            <h1>Project 1</h1>
-            <p>another card</p>
-            <a href="">&rarr;</a>
-          </ProjectCard>
-          <ProjectCard>
-            <h1>Project 2</h1>
-            <p>another card</p>
-            <a href="">&rarr;</a>
-          </ProjectCard>
-          <ProjectCard>
-            <h1>Project 3</h1>
-            <p>another card</p>
-            <a href="">&rarr;</a>
-          </ProjectCard>
+          <div css={projectContainer}>
+            <ProjectCard>
+              <h1>Project 1</h1>
+              <p>another card</p>
+              <a href="">&rarr;</a>
+            </ProjectCard>
+            <ProjectCard>
+              <h1>Project 2</h1>
+              <p>another card</p>
+              <a href="">&rarr;</a>
+            </ProjectCard>
+            <ProjectCard>
+              <h1>Project 3</h1>
+              <p>another card</p>
+              <a href="">&rarr;</a>
+            </ProjectCard>
+          </div>
         </div>
       </div>
     </>
