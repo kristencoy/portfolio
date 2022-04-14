@@ -1,12 +1,12 @@
 import Particles from "react-tsparticles";
 import { css } from "@emotion/react";
 import Link from "next/link";
-import Button from "@mui/material/button";
-import Navbar from "../src/components/Navbar";
-import AppBar from "@mui/material/AppBar";
+import Button from "@mui/material/Button";
+// import Navbar from "../src/components/Navbar";
 import About from "../src/components/About";
 import Projects from "../src/components/Projects";
 import FooterContact from "../src/components/FooterContact";
+import { FaRegGem } from "react-icons/fa";
 
 const headerStyle = css`
   height: 100vh;
@@ -30,14 +30,26 @@ const containerStyleProject = css`
   padding: 3rem;
   align-items: center;
   width: 100%;
-  clip-path: polygon(0 14%, 100% 0, 100% 87%, 0% 100%);
+  height: auto;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 `;
 
 const contentContainer = css`
   left: 10%;
   width: 75%;
   padding-top: 2rem;
-  height: 100vh;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const contentContainerProjects = css`
+  /* left: 10%; */
+  width: 75%;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,6 +79,11 @@ const titleColor = css`
   color: #007c90;
   font-size: inherit;
   display: inline;
+`;
+
+const gemStyle = css`
+  font-size: 12rem;
+  color: #007c90;
 `;
 
 const Lab = () => {
@@ -192,9 +209,12 @@ const Lab = () => {
         </div>
       </div>
       <div css={containerStyleProject}>
-        <div id="projects-section" css={contentContainer}>
+        <div id="projects-section" css={contentContainerProjects}>
           <Projects />
         </div>
+      </div>
+      <div css={containerStyle}>
+        <FaRegGem css={gemStyle} />
       </div>
       <FooterContact />
     </>
