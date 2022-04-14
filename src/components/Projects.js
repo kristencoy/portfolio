@@ -1,5 +1,8 @@
 import { css } from "@emotion/react";
-import picture from "../../public/meal_planner_frame.png";
+import mealPlannerPicture from "../../public/meal-planner-project/meal_planner_frame.png";
+import cogAccPicture from "../../public/cog-accessibility-project/cog_acc_spaced.png";
+import picnickyHomePicture from "../../public/picnicky_home.png";
+import portfolioHomePicture from "../../public/portfolio_home.png";
 import { FaGithub } from "react-icons/fa";
 
 // @todo:
@@ -37,10 +40,10 @@ const projectCard = css`
   border-radius: 10px;
   height: 28rem;
   width: 95%;
-  min-width: 800px;
+  min-width: 900px;
   margin-top: 2rem;
-  margin: 2.5rem;
-  padding: 2rem;
+  margin: 1.5rem;
+  padding: 0.7rem;
   background-color: white;
   display: flex;
   overflow: auto;
@@ -61,6 +64,7 @@ const projectsSection = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
 `;
 
@@ -72,7 +76,8 @@ const projectImgStyles = css`
 const projectText = css`
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   span {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
@@ -80,12 +85,11 @@ const projectText = css`
     margin-bottom: 2rem;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 100%;
     font-weight: 300;
     color: black;
     line-height: 1.5;
-    margin-bottom: 4rem;
   }
   a {
     font-size: 2rem;
@@ -97,16 +101,25 @@ const projectText = css`
   }
 `;
 
+const titleContainer = css`
+  width: 75%;
+`;
+
 function Projects() {
   return (
     <div css={projectsSection}>
-      <h1 css={projectsTitle}>Recent Projects</h1>
+      <div css={titleContainer}>
+        <h1 css={projectsTitle}>Recent Projects</h1>
+      </div>
       <div css={projectContainer}>
         <div css={projectCard}>
-          <img css={projectImgStyles} src={picture.src} />
+          <img css={projectImgStyles} src={mealPlannerPicture.src} />
           <div css={projectText}>
             <h1>Weekly Meal Planner</h1>
-            <p>It's a meal planner that picks recipes for you</p>
+            <p>
+              It's a meal planner that picks recipes for you when your brain
+              doesn't want to come up with things to make for the week
+            </p>
             <span>Next.js | React | MongoDB</span>
             <a href="">
               <FaGithub />
@@ -126,8 +139,10 @@ function Projects() {
               <FaGithub />
             </a>
           </div>
+          <img css={projectImgStyles} src={cogAccPicture.src} />
         </div>
         <div css={projectCard}>
+          <img css={projectImgStyles} src={picnickyHomePicture.src} />
           <div css={projectText}>
             <h1>Picnicky</h1>
             <p>
@@ -152,6 +167,7 @@ function Projects() {
               <FaGithub />
             </a>
           </div>
+          <img css={projectImgStyles} src={portfolioHomePicture.src} />
         </div>
       </div>
     </div>

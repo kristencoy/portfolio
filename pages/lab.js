@@ -31,7 +31,7 @@ const containerStyleProject = css`
   align-items: center;
   width: 100%;
   height: auto;
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  clip-path: polygon(0 7%, 100% 0, 100% 93%, 0% 100%);
 `;
 
 const contentContainer = css`
@@ -46,7 +46,7 @@ const contentContainer = css`
 
 const contentContainerProjects = css`
   /* left: 10%; */
-  width: 75%;
+  width: 100%;
   padding-top: 6rem;
   padding-bottom: 6rem;
   height: auto;
@@ -209,8 +209,8 @@ const Lab = () => {
         </div>
       </div>
       <div css={containerStyleProject}>
-        <div id="projects-section" css={contentContainerProjects}>
-          <Projects />
+        <div css={contentContainerProjects}>
+          <Projects id="projects-section" />
         </div>
       </div>
       <div css={containerStyle}>
