@@ -1,11 +1,12 @@
 import Particles from "react-tsparticles";
 import { css } from "@emotion/react";
-import ProjectCard from "../src/components/ProjectCard";
 import Link from "next/link";
 import Button from "@mui/material/button";
 import Navbar from "../src/components/Navbar";
 import AppBar from "@mui/material/AppBar";
 import About from "../src/components/About";
+import Projects from "../src/components/Projects";
+import FooterContact from "../src/components/FooterContact";
 
 const headerStyle = css`
   height: 100vh;
@@ -20,18 +21,26 @@ const containerStyle = css`
   width: 100%;
 `;
 
+const containerStyleProject = css`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* background-color: #f3f3f3; */
+  background-color: #007d902a;
+  padding: 3rem;
+  align-items: center;
+  width: 100%;
+  clip-path: polygon(0 14%, 100% 0, 100% 87%, 0% 100%);
+`;
+
 const contentContainer = css`
   left: 10%;
   width: 75%;
   padding-top: 2rem;
   height: 100vh;
-`;
-
-const projectContainer = css`
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const titleContainerStyle = css`
@@ -180,45 +189,14 @@ const Lab = () => {
       <div css={containerStyle}>
         <div id="about-section" css={contentContainer}>
           <About />
-          <Link href="#projects-section" passHref>
-            <Button
-              variant="outlined"
-              sx={{ marginTop: 10, color: "#007c90", borderColor: "#007c90" }}
-            >
-              See what I've been working on &rarr;
-            </Button>
-          </Link>
-        </div>
-        <div id="projects-section" css={contentContainer}>
-          <h1>Recent Projects</h1>
-
-          {/* <Card sx={{ maxHeight: 400 }} variant="outlined">
-          <CardContent>
-            <Typography variant="h3" gutterBottom>
-              Card component
-            </Typography>
-            <Typography variant="h5">Card stuff</Typography>
-          </CardContent>
-        </Card> */}
-          <div css={projectContainer}>
-            <ProjectCard>
-              <h1>Project 1</h1>
-              <p>another card</p>
-              <a href="">&rarr;</a>
-            </ProjectCard>
-            <ProjectCard>
-              <h1>Project 2</h1>
-              <p>another card</p>
-              <a href="">&rarr;</a>
-            </ProjectCard>
-            <ProjectCard>
-              <h1>Project 3</h1>
-              <p>another card</p>
-              <a href="">&rarr;</a>
-            </ProjectCard>
-          </div>
         </div>
       </div>
+      <div css={containerStyleProject}>
+        <div id="projects-section" css={contentContainer}>
+          <Projects />
+        </div>
+      </div>
+      <FooterContact />
     </>
   );
 };

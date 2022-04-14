@@ -8,6 +8,7 @@ const style = css`
   margin-left: 1rem;
   margin-top: 2rem;
   padding: 1rem;
+  background-color: white;
 `;
 
 function ProjectCard(props) {
