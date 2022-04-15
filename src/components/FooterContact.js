@@ -6,12 +6,13 @@ import { HiOutlineMail } from "react-icons/hi";
 const footerContainer = css`
   clip-path: polygon(50% 35%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-color: #1b293e;
-  height: 60vh;
+  /* height: 60vh; */
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  padding: 2.5rem;
 `;
 
 const contentCard = css`
@@ -24,6 +25,7 @@ const contentCard = css`
   align-self: center;
   position: relative;
   padding-top: 6rem;
+  margin-top: 2rem;
 `;
 
 const footerTitle = css`
@@ -58,6 +60,26 @@ const linkStyles = css`
   }
 `;
 
+const linksContStyle = css`
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+  justify-content: space-between;
+`;
+
+const footerStyle = css`
+  bottom: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+`;
+
+const footerText = css`
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 0.8rem;
+  color: white;
+`;
+
 const MailTo = ({ mailto, label }) => {
   return (
     <Link
@@ -88,11 +110,16 @@ function FooterContact() {
     <div css={footerContainer}>
       <div css={contentCard}>
         <h1 css={footerTitle}>Let's connect</h1>
-        <MailTo
-          label={<HiOutlineMail />}
-          mailto="mailto:kristenwcoy@gmail.com"
-        />
-        <GitHubLink />
+        <div css={linksContStyle}>
+          <MailTo
+            label={<HiOutlineMail />}
+            mailto="mailto:kristenwcoy@gmail.com"
+          />
+          <GitHubLink />
+        </div>
+      </div>
+      <div css={footerStyle}>
+        <span css={footerText}>Designed & Built by Kristen Coy</span>
       </div>
     </div>
   );

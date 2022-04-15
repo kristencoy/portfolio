@@ -149,7 +149,7 @@ function Projects() {
               A fullstack CRUD application made as part of Colt Steele's "Web
               Developer Bootcamp" course
             </p>
-            <span>React | styled-components</span>
+            <span>Vanilla JS | Express | Mongoose | Bootstrap 5</span>
             <a href="">
               <FaGithub />
             </a>

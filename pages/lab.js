@@ -209,8 +209,8 @@ const Lab = () => {
         </div>
       </div>
       <div css={containerStyleProject}>
-        <div css={contentContainerProjects}>
-          <Projects id="projects-section" />
+        <div id="projects-section" css={contentContainerProjects}>
+          <Projects />
         </div>
       </div>
       <div css={containerStyle}>
