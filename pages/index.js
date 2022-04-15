@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import Head from "next/head";
-import Lab from "./Lab";
+import MainContent from "../src/components/MainContent";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         />
       </Head>
 
-      <Lab />
+      <MainContent />
     </div>
   );
 }

@@ -1,11 +1,12 @@
+/** @jsxImportSource @emotion/react */
 import Particles from "react-tsparticles";
-import { css } from "@emotion/react";
+import { css, jsx, keyframes } from "@emotion/react";
 import Link from "next/link";
 import Button from "@mui/material/Button";
 // import Navbar from "../src/components/Navbar";
-import About from "../src/components/About";
-import Projects from "../src/components/Projects";
-import FooterContact from "../src/components/FooterContact";
+import About from "./About";
+import Projects from "./Projects";
+import FooterContact from "./FooterContact";
 import { FaRegGem } from "react-icons/fa";
 
 const headerStyle = css`
@@ -67,12 +68,52 @@ const titleContainerStyle = css`
   font-size: 2rem;
 `;
 
+const titleAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const textAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    
+  }
+`;
+
 const titleStyle = css`
   color: white;
   font-weight: 400;
   font-size: 4rem;
   letter-spacing: 1px;
   z-index: 10;
+  animation: ${titleAnimation} 1s ease-in-out;
+  animation-fill-mode: forwards;
+`;
+
+const spanStyle1 = css`
+  animation: ${textAnimation} 1.2s ease;
+  animation-delay: 0;
+  animation-fill-mode: both;
+`;
+const spanStyle2 = css`
+  animation: ${textAnimation} 1.2s ease;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+`;
+const spanStyle3 = css`
+  animation: ${textAnimation} 1.2s ease;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
 `;
 
 const titleColor = css`
@@ -89,11 +130,6 @@ const gemStyle = css`
 const Lab = () => {
   const particlesInit = async (main) => {
     console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    // await loadFull(main);
   };
 
   const particlesLoaded = (container) => {
@@ -107,10 +143,10 @@ const Lab = () => {
           <h1 css={titleStyle}>
             Hi, I'm <span css={titleColor}>Kristen.</span>
           </h1>
-          <span>Aspiring full-stack developer,</span>
-          <span>motivated self-initiated learner,</span>
-          <span>and reformed healthcare worker.</span>
-          <Link href="#about-section" passHref>
+          <span css={spanStyle1}>Aspiring full stack developer,</span>
+          <span css={spanStyle2}>motivated self-initiated learner,</span>
+          <span css={spanStyle3}>and functional healthcare clinician.</span>
+          <Link href="#about" passHref>
             <Button
               variant="outlined"
               sx={{ marginTop: 10, color: "#007c90", borderColor: "#007c90" }}
@@ -204,12 +240,12 @@ const Lab = () => {
       </div>
 
       <div css={containerStyle}>
-        <div id="about-section" css={contentContainer}>
+        <div id="about" css={contentContainer}>
           <About />
         </div>
       </div>
       <div css={containerStyleProject}>
-        <div id="projects-section" css={contentContainerProjects}>
+        <div id="projects" css={contentContainerProjects}>
           <Projects />
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { css } from "@emotion/react";
 import mealPlannerPicture from "../../public/meal-planner-project/meal_planner_frame.png";
 import cogAccPicture from "../../public/cog-accessibility-project/cog_acc_spaced.png";
@@ -117,27 +118,44 @@ function Projects() {
           <div css={projectText}>
             <h1>Weekly Meal Planner</h1>
             <p>
-              It's a meal planner that picks recipes for you when your brain
-              doesn't want to come up with things to make for the week
+              A meal planner application that stores recipe information via
+              MongoDB, and provides a 5 day recipe-based meal plan to make
+              weekly planning/shopping less time intensive. Allows the user to
+              create and upload their own recipes to the app.
             </p>
-            <span>Next.js | React | MongoDB</span>
-            <a href="">
-              <FaGithub />
-            </a>
+            <span>Next.js | React | MongoDB | Node.js</span>
+            <Link
+              href="https://github.com/kristencoy/meal-planner"
+              passHref={true}
+            >
+              <a>
+                <FaGithub />
+              </a>
+            </Link>
           </div>
         </div>
         <div css={projectCard}>
           <div css={projectText}>
             <h1>Cognitive Accessibility</h1>
             <p>
-              A web application that allows the user to personalize their
-              experience with the ultimate goal of improving content
-              accessibility for those with visual, attention, or memory deficits
+              An application that demonstrates a set of utilities to allow the
+              user to personalize the way they view information. Created with
+              the ultimate goal of improving content accessibility for those
+              with visual, attention, or memory deficits. Features include a
+              tool for toggling between light and dark themes, font size
+              controls, a toggle to space content for improved readability, and
+              a toggle to filter extraneous content for improved attention to
+              information.
             </p>
             <span>React | styled-components | Node.js</span>
-            <a href="">
-              <FaGithub />
-            </a>
+            <Link
+              href="https://github.com/kristencoy/cognitive-accessibility"
+              passHref={true}
+            >
+              <a>
+                <FaGithub />
+              </a>
+            </Link>
           </div>
           <img css={projectImgStyles} src={cogAccPicture.src} />
         </div>
@@ -146,26 +164,35 @@ function Projects() {
           <div css={projectText}>
             <h1>Picnicky</h1>
             <p>
-              A fullstack CRUD application made as part of Colt Steele's "Web
-              Developer Bootcamp" course
+              A fullstack CRUD application made using boilerplate from Colt
+              Steele's "Web Developer Bootcamp" Udemy course. Provides a
+              platform for users to create and review picnic locations.
             </p>
-            <span>Vanilla JS | Express | Mongoose | Bootstrap 5</span>
-            <a href="">
-              <FaGithub />
-            </a>
+            <span>Node.js | Express | Mongoose | Bootstrap 5</span>
+            <Link href="https://github.com/kristencoy/picnic" passHref={true}>
+              <a>
+                <FaGithub />
+              </a>
+            </Link>
           </div>
         </div>
         <div css={projectCard}>
           <div css={projectText}>
-            <h1>Portfolio</h1>
+            <h1>Personal Website</h1>
             <p>
-              Yep, the one you're looking at. I actually put a lot of work into
-              this thing.
+              Yep, the one you're looking at. I designed and built this website
+              using Next.js, React, emotion, and the tsparticles library. I had
+              a lot of fun building it!
             </p>
             <span>Next.js | React | emotion</span>
-            <a href="">
-              <FaGithub />
-            </a>
+            <Link
+              href="https://github.com/kristencoy/portfolio"
+              passHref={true}
+            >
+              <a>
+                <FaGithub />
+              </a>
+            </Link>
           </div>
           <img css={projectImgStyles} src={portfolioHomePicture.src} />
         </div>
