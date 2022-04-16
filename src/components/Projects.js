@@ -35,6 +35,8 @@ const projectCard = css`
   border-radius: 10px;
   height: 28rem;
   width: 95%;
+  display: flex;
+  flex-direction: row;
   min-width: 900px;
   margin-top: 2rem;
   margin: 1.5rem;
@@ -43,6 +45,11 @@ const projectCard = css`
   display: flex;
   overflow: auto;
   transition: all 0.2s;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    min-width: 400px;
+    height: auto;
+  }
   /* &:hover {
     transform: translateY(-5px);
   } */
@@ -60,8 +67,9 @@ const projectsSection = css`
 `;
 
 const projectImgStyles = css`
-  height: 100%;
+  max-height: 100%;
   max-width: 100%;
+  object-fit: contain;
 `;
 
 const projectText = css`
