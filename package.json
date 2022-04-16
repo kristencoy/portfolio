@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "rm -rf .next && npm run build && next export",
+    "export": "rm -rf .next && yarn build && next export",
     "start": "next start",
     "lint": "next lint"
   },
