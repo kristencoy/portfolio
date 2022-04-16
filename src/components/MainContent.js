@@ -141,7 +141,8 @@ export default function MainContent() {
       <div css={headerStyle}>
         <div css={titleContainerStyle}>
           <h1 css={titleStyle}>
-            Hi, I'm <span css={titleColor}>Kristen.</span>
+            {"Hi, I'm "}
+            <span css={titleColor}>Kristen.</span>
           </h1>
           <span css={spanStyle1}>Aspiring full stack developer,</span>
           <span css={spanStyle2}>motivated self-initiated learner,</span>

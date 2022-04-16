@@ -155,8 +155,9 @@ export default function Projects() {
             <h1>Picnicky</h1>
             <p>
               A fullstack CRUD application made using boilerplate from Colt
-              Steele's "Web Developer Bootcamp" Udemy course. Provides a
-              platform for users to create and review picnic locations.
+              Steele&apos;s &quot;Web Developer Bootcamp&quot; Udemy course.
+              Provides a platform for users to create and review picnic
+              locations.
             </p>
             <span>Node.js | Express | Mongoose | Bootstrap 5</span>
             <Link href="https://github.com/kristencoy/picnic" passHref={true}>
@@ -170,9 +171,9 @@ export default function Projects() {
           <div css={projectText}>
             <h1>Personal Website</h1>
             <p>
-              Yep, the one you're looking at. I designed and built this website
-              using Next.js, React, emotion, and the tsparticles library. I had
-              a lot of fun building it!
+              Yep, the one you&apos;re looking at. I designed and built this
+              website using Next.js, React, emotion, and the tsparticles
+              library. I had a lot of fun building it!
             </p>
             <span>Next.js | React | emotion</span>
             <Link

@@ -109,7 +109,7 @@ export default function FooterContact() {
   return (
     <div css={footerContainer}>
       <div css={contentCard}>
-        <h1 css={footerTitle}>Let's connect</h1>
+        <h1 css={footerTitle}>{"Let's connect"}</h1>
         <div css={linksContStyle}>
           <MailTo
             label={<HiOutlineMail />}
