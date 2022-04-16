@@ -6,12 +6,6 @@ import picnickyHomePicture from "../../public/picnicky_home.png";
 import portfolioHomePicture from "../../public/portfolio_home.png";
 import { FaGithub } from "react-icons/fa";
 
-// @todo:
-// decide on project style - how much to write, etc.
-// tweak projects as much as possible
-// make browserframe screenshots
-// go from there
-
 const projectContainer = css`
   display: flex;
   flex-direction: column;
@@ -49,16 +43,12 @@ const projectCard = css`
   display: flex;
   overflow: auto;
   transition: all 0.2s;
-  &:hover {
+  /* &:hover {
     transform: translateY(-5px);
-  }
+  } */
 `;
 
 const projectsSection = css`
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px; */
-  /* max-height: 75%;
-  max-width: 90%; */
   margin-left: 1rem;
   margin-top: 2rem;
   padding: 3rem;
@@ -106,7 +96,7 @@ const titleContainer = css`
   width: 75%;
 `;
 
-function Projects() {
+export default function Projects() {
   return (
     <div css={projectsSection}>
       <div css={titleContainer}>
@@ -200,5 +190,3 @@ function Projects() {
     </div>
   );
 }
-
-export default Projects;

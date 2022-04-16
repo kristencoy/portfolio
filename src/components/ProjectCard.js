@@ -11,8 +11,6 @@ const style = css`
   background-color: white;
 `;
 
-function ProjectCard(props) {
+export default function ProjectCard(props) {
   return <div css={style}>{props.children}</div>;
 }
-
-export default ProjectCard;

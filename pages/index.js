@@ -7,7 +7,10 @@ export default function Home() {
     <div>
       <Head>
         <title>Kristen Coy</title>
-        <meta name="description" content="Portfolio of Kristen Winslow Coy" />
+        <meta
+          name="description"
+          content="Welcome to the portfolio of one Kristen Winslow Coy"
+        />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

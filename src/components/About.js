@@ -41,7 +41,7 @@ const aboutTitle = css`
   }
 `;
 
-function About() {
+export default function About() {
   return (
     <div css={aboutCard}>
       <h1 css={aboutTitle}>About</h1>
@@ -76,5 +76,3 @@ function About() {
     </div>
   );
 }
-
-export default About;

@@ -127,7 +127,7 @@ const gemStyle = css`
   color: #007c90;
 `;
 
-const Lab = () => {
+export default function MainContent() {
   const particlesInit = async (main) => {
     console.log(main);
   };
@@ -255,6 +255,4 @@ const Lab = () => {
       <FooterContact />
     </>
   );
-};
-
-export default Lab;
+}

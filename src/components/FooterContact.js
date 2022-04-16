@@ -105,7 +105,7 @@ const GitHubLink = () => {
   );
 };
 
-function FooterContact() {
+export default function FooterContact() {
   return (
     <div css={footerContainer}>
       <div css={contentCard}>
@@ -113,7 +113,7 @@ function FooterContact() {
         <div css={linksContStyle}>
           <MailTo
             label={<HiOutlineMail />}
-            mailto="mailto:kristenwcoy@gmail.com"
+            mailto="mailto:kristen@kristencoy.com"
           />
           <GitHubLink />
         </div>
@@ -124,5 +124,3 @@ function FooterContact() {
     </div>
   );
 }
-
-export default FooterContact;
