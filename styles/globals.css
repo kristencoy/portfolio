@@ -6,6 +6,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
   font-family: 'Mulish', sans-serif;
   scroll-behavior: smooth;
+  min-width: 300px;
+  overflow-x: hidden;
 }
 
 a {

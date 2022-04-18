@@ -19,6 +19,7 @@ const projectsTitle = css`
   width: 100%;
   margin-bottom: 3rem;
   letter-spacing: 2px;
+  white-space: nowrap;
   &:before {
     border-bottom: 0.2rem solid #007c90;
     content: "";
@@ -33,22 +34,24 @@ const projectsTitle = css`
 const projectCard = css`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  height: 28rem;
-  width: 95%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  max-width: 1100px;
   min-width: 900px;
   margin-top: 2rem;
   margin: 1.5rem;
   padding: 0.7rem;
+  padding-bottom: 2rem;
   background-color: white;
   display: flex;
   overflow: auto;
   transition: all 0.2s;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1000px) {
     flex-direction: column;
-    min-width: 400px;
     height: auto;
+    margin: 1.5rem 0.75rem 1.5rem;
+    min-width: 0;
   }
   /* &:hover {
     transform: translateY(-5px);
@@ -56,7 +59,7 @@ const projectCard = css`
 `;
 
 const projectsSection = css`
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   margin-top: 2rem;
   padding: 3rem;
   display: flex;
@@ -64,17 +67,26 @@ const projectsSection = css`
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media only screen and (max-width: 1000px) {
+    padding: 4rem 0 8rem;
+  }
 `;
 
 const projectImgStyles = css`
-  max-height: 100%;
-  max-width: 100%;
+  max-width: 70%;
+  flex-shrink: 2;
   object-fit: contain;
+  @media only screen and (max-width: 1000px) {
+    max-width: 100%;
+    height: auto;
+  }
 `;
 
 const projectText = css`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  max-height: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
   span {
@@ -106,7 +118,7 @@ const titleContainer = css`
 
 export default function Projects() {
   return (
-    <div css={projectsSection}>
+    <div id="projects" css={projectsSection}>
       <div css={titleContainer}>
         <h1 css={projectsTitle}>Recent Projects</h1>
       </div>
@@ -145,7 +157,7 @@ export default function Projects() {
               a toggle to filter extraneous content for improved attention to
               information.
             </p>
-            <span>React | styled-components | Node.js</span>
+            <span>React | styled-components</span>
             <Link
               href="https://github.com/kristencoy/cognitive-accessibility"
               passHref={true}
@@ -183,7 +195,7 @@ export default function Projects() {
               website using Next.js, React, emotion, and the tsparticles
               library. I had a lot of fun building it!
             </p>
-            <span>Next.js | React | emotion</span>
+            <span>Next.js | React | emotion | Netlify</span>
             <Link
               href="https://github.com/kristencoy/portfolio"
               passHref={true}
