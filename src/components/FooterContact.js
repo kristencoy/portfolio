@@ -12,7 +12,7 @@ const footerContainer = css`
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 6rem 2.5rem;
 `;
 
 const contentCard = css`
