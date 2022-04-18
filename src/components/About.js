@@ -1,18 +1,20 @@
 import { css } from "@emotion/react";
-import Button from "@mui/material/Button";
 import Link from "next/link";
+import Button from "./Button";
 
 const aboutCard = css`
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px; */
-  /* max-height: 75%; */
   max-width: 90%;
   margin-left: 1rem;
+  margin-right: 1rem;
   margin-top: 1.25rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (max-width: 600px) {
+    padding: 0;
+    max-width: 100%;
+  }
 `;
 
 const aboutPara = css`
@@ -61,15 +63,7 @@ export default function About() {
         kombucha, and listening to my husband talk about D&D.
       </p>
       <Link href="#projects" passHref>
-        <Button
-          variant="outlined"
-          sx={{
-            marginTop: 10,
-            color: "#007c90",
-            borderColor: "#007c90",
-            width: "fit-content",
-          }}
-        >
+        <Button href="#projects">
           See what I&apos;ve been working on &rarr;
         </Button>
       </Link>

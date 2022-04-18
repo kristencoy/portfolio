@@ -2,15 +2,16 @@
 import Particles from "react-tsparticles";
 import { css, jsx, keyframes } from "@emotion/react";
 import Link from "next/link";
-import Button from "@mui/material/Button";
 // import Navbar from "../src/components/Navbar";
 import About from "./About";
 import Projects from "./Projects";
 import FooterContact from "./FooterContact";
 import { FaRegGem } from "react-icons/fa";
+import Button from "./Button";
 
 const headerStyle = css`
   height: 100vh;
+  width: 100%;
 `;
 
 const containerStyle = css`
@@ -33,6 +34,9 @@ const containerStyleProject = css`
   width: 100%;
   height: auto;
   clip-path: polygon(0 7%, 100% 0, 100% 93%, 0% 100%);
+  @media only screen and (max-width: 600px) {
+    padding: 0 0 3rem;
+  }
 `;
 
 const contentContainer = css`
@@ -43,13 +47,16 @@ const contentContainer = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const contentContainerProjects = css`
   /* left: 10%; */
   width: 100%;
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  margin-bottom: 6rem;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -66,6 +73,11 @@ const titleContainerStyle = css`
   color: white;
   font-weight: 200;
   font-size: 2rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 1.5rem;
+    align-content: center;
+    justify-content: center;
+  }
 `;
 
 const titleAnimation = keyframes`
@@ -122,6 +134,28 @@ const titleColor = css`
   display: inline;
 `;
 
+const linkBtn = css`
+  width: 90%;
+  border: 2px solid #007d90;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  color: #007d90;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 5rem 0 3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: #007d902a;
+  }
+  &:active {
+    transform: translateY(3px);
+  }
+`;
+
 const gemStyle = css`
   font-size: 12rem;
   color: #007c90;
@@ -148,17 +182,13 @@ export default function MainContent() {
           <span css={spanStyle2}>motivated self-initiated learner,</span>
           <span css={spanStyle3}>and functional healthcare clinician.</span>
           <Link href="#about" passHref>
-            <Button
-              variant="outlined"
-              sx={{ marginTop: 10, color: "#007c90", borderColor: "#007c90" }}
-            >
-              Look around &rarr;
-            </Button>
+            <Button href="#about">Look around &rarr;</Button>
           </Link>
         </div>
         <Particles
           id="tsparticles"
           height="100vh"
+          width="100%"
           min-height="500px"
           init={particlesInit}
           loaded={particlesLoaded}
@@ -246,7 +276,7 @@ export default function MainContent() {
         </div>
       </div>
       <div css={containerStyleProject}>
-        <div id="projects" css={contentContainerProjects}>
+        <div css={contentContainerProjects}>
           <Projects />
         </div>
       </div>
