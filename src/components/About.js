@@ -5,6 +5,7 @@ import Button from "./Button";
 const aboutCard = css`
   max-width: 90%;
   margin-left: 1rem;
+  background-color: white;
   margin-right: 1rem;
   margin-top: 1.25rem;
   padding: 2rem;
@@ -48,7 +49,7 @@ export default function About() {
     <div css={aboutCard}>
       <h1 css={aboutTitle}>About</h1>
       <p css={aboutPara}>
-        I&apos;m a full stack web developer who has really come to enjoy that
+        I&apos;m a full stack developer who has really come to enjoy that
         dopamine hit when my code looks, feels, and runs the way I want it to.
         My background is in occupational therapy with a focus in helping people
         achieve their daily functional goals through adaptations to the task,

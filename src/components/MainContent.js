@@ -12,6 +12,7 @@ import Button from "./Button";
 const headerStyle = css`
   height: 100vh;
   width: 100%;
+  background-color: #1b293e;
 `;
 
 const containerStyle = css`
@@ -27,8 +28,8 @@ const containerStyleProject = css`
   display: flex;
   flex-direction: column;
   position: relative;
-  /* background-color: #f3f3f3; */
-  background-color: #007d902a;
+  background-color: #f7fcfc;
+  // background-color: #007d90;
   padding: 3rem;
   align-items: center;
   width: 100%;
@@ -178,7 +179,7 @@ export default function MainContent() {
             {"Hi, I'm "}
             <span css={titleColor}>Kristen.</span>
           </h1>
-          <span css={spanStyle1}>Aspiring full stack developer,</span>
+          <span css={spanStyle1}>Full stack developer,</span>
           <span css={spanStyle2}>motivated self-initiated learner,</span>
           <span css={spanStyle3}>and functional healthcare clinician.</span>
           <Link href="#about" passHref>

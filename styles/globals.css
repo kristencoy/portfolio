@@ -8,6 +8,7 @@ body {
   scroll-behavior: smooth;
   min-width: 300px;
   overflow-x: hidden;
+  background-color: #1b293e;
 }
 
 a {
