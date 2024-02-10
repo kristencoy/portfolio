@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
-import Particles from "react-tsparticles";
-import { css, jsx, keyframes } from "@emotion/react";
-import Link from "next/link";
+import Particles from 'react-tsparticles';
+import { css, jsx, keyframes } from '@emotion/react';
+import Link from 'next/link';
 // import Navbar from "../src/components/Navbar";
-import About from "./About";
-import Projects from "./Projects";
-import FooterContact from "./FooterContact";
-import { FaRegGem } from "react-icons/fa";
-import Button from "./Button";
+import About from './About';
+import Projects from './Projects';
+import FooterContact from './FooterContact';
+import { FaRegGem } from 'react-icons/fa';
+import Button from './Button';
 
 const headerStyle = css`
   height: 100vh;
@@ -178,38 +178,38 @@ export default function MainContent() {
             {"Hi, I'm "}
             <span css={titleColor}>Kristen.</span>
           </h1>
-          <span css={spanStyle1}>Aspiring full stack developer,</span>
-          <span css={spanStyle2}>motivated self-initiated learner,</span>
-          <span css={spanStyle3}>and functional healthcare clinician.</span>
-          <Link href="#about" passHref>
-            <Button href="#about">Look around &rarr;</Button>
+          <span css={spanStyle1}>Full stack developer,</span>
+          <span css={spanStyle2}>former healthcare clincian,</span>
+          <span css={spanStyle3}>and lover of learning.</span>
+          <Link href='#about' passHref>
+            <Button href='#about'>Look around &rarr;</Button>
           </Link>
         </div>
         <Particles
-          id="tsparticles"
-          height="100vh"
-          width="100%"
-          min-height="500px"
+          id='tsparticles'
+          height='100vh'
+          width='100%'
+          min-height='500px'
           init={particlesInit}
           loaded={particlesLoaded}
           options={{
             fullScreen: { enable: false, zIndex: 0 },
             background: {
               color: {
-                value: "#1b293e",
+                value: '#1b293e',
               },
             },
             fpsLimit: 120,
             interactivity: {
-              detectsOn: "canvas",
+              detectsOn: 'canvas',
               events: {
                 onClick: {
                   enable: true,
-                  mode: "push",
+                  mode: 'push',
                 },
                 onHover: {
                   enable: true,
-                  mode: "connect",
+                  mode: 'connect',
                 },
                 resize: true,
               },
@@ -226,10 +226,10 @@ export default function MainContent() {
             },
             particles: {
               color: {
-                value: ["#ffffff", "#007c90"],
+                value: ['#ffffff', '#007c90'],
               },
               links: {
-                color: "#ffffff",
+                color: '#ffffff',
                 distance: 150,
                 enable: false,
                 opacity: 0.3,
@@ -239,10 +239,10 @@ export default function MainContent() {
                 enable: true,
               },
               move: {
-                direction: "none",
+                direction: 'none',
                 enable: true,
                 outModes: {
-                  default: "bounce",
+                  default: 'bounce',
                 },
                 random: true,
                 speed: 0.5,
@@ -259,7 +259,7 @@ export default function MainContent() {
                 value: 0.7,
               },
               shape: {
-                type: "circle",
+                type: 'circle',
               },
               size: {
                 value: { min: 0.5, max: 1 },
@@ -271,7 +271,7 @@ export default function MainContent() {
       </div>
 
       <div css={containerStyle}>
-        <div id="about" css={contentContainer}>
+        <div id='about' css={contentContainer}>
           <About />
         </div>
       </div>
