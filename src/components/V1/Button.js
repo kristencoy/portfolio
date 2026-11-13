@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 const linkBtn = css`
   width: 90%;
@@ -23,11 +23,7 @@ const linkBtn = css`
 `;
 
 function Button(props) {
-  return (
-    <a css={linkBtn} href={props.href}>
-      {props.children}
-    </a>
-  );
+  return <div>yep</div>;
 }
 
 export default Button;

@@ -12,6 +12,7 @@ import Button from './Button';
 const headerStyle = css`
   height: 100vh;
   width: 100%;
+  display: flex;
 `;
 
 const containerStyle = css`
@@ -104,8 +105,8 @@ const textAnimation = keyframes`
 
 const titleStyle = css`
   color: white;
-  font-weight: 400;
-  font-size: 4rem;
+  font-weight: 600;
+  font-size: 4.5rem;
   letter-spacing: 1px;
   z-index: 10;
   animation: ${titleAnimation} 1s ease-in-out;
@@ -161,6 +162,11 @@ const gemStyle = css`
   color: #007c90;
 `;
 
+const partDivStyle = css`
+  border-radius: 50%;
+  overflow: hidden;
+`;
+
 export default function MainContent() {
   const particlesInit = async (main) => {
     console.log(main);
@@ -179,95 +185,98 @@ export default function MainContent() {
             <span css={titleColor}>Kristen.</span>
           </h1>
           <span css={spanStyle1}>Full stack developer,</span>
-          <span css={spanStyle2}>former healthcare clincian,</span>
-          <span css={spanStyle3}>and lover of learning.</span>
+          <span css={spanStyle2}>real human person,</span>
+          <span css={spanStyle3}>definitely not a robot.</span>
+          <marquee>No, not a robot...</marquee>
           <Link href='#about' passHref>
             <Button href='#about'>Look around &rarr;</Button>
           </Link>
         </div>
-        <Particles
-          id='tsparticles'
-          height='100vh'
-          width='100%'
-          min-height='500px'
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={{
-            fullScreen: { enable: false, zIndex: 0 },
-            background: {
-              color: {
-                value: '#1b293e',
+        <div css={partDivStyle}>
+          <Particles
+            id='tsparticles'
+            height='100vh'
+            width='100%'
+            min-height='500px'
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={{
+              fullScreen: { enable: false, zIndex: 0 },
+              background: {
+                color: {
+                  value: '#1b293e',
+                },
               },
-            },
-            fpsLimit: 120,
-            interactivity: {
-              detectsOn: 'canvas',
-              events: {
-                onClick: {
+              fpsLimit: 120,
+              interactivity: {
+                detectsOn: 'canvas',
+                events: {
+                  onClick: {
+                    enable: true,
+                    mode: 'push',
+                  },
+                  onHover: {
+                    enable: true,
+                    mode: 'connect',
+                  },
+                  resize: true,
+                },
+                modes: {
+                  push: {
+                    quantity: 4,
+                  },
+                  connect: {
+                    distance: 75,
+                    radius: 250,
+                    lineLinked: { opacity: 0.3 },
+                  },
+                },
+              },
+              particles: {
+                color: {
+                  value: ['#ffffff', '#007c90'],
+                },
+                links: {
+                  color: '#ffffff',
+                  distance: 150,
+                  enable: false,
+                  opacity: 0.3,
+                  width: 1,
+                },
+                collisions: {
                   enable: true,
-                  mode: 'push',
                 },
-                onHover: {
+                move: {
+                  direction: 'none',
                   enable: true,
-                  mode: 'connect',
+                  outModes: {
+                    default: 'bounce',
+                  },
+                  random: true,
+                  speed: 0.5,
+                  straight: false,
                 },
-                resize: true,
-              },
-              modes: {
-                push: {
-                  quantity: 4,
+                number: {
+                  density: {
+                    enable: true,
+                    area: 750,
+                  },
+                  value: 250,
                 },
-                connect: {
-                  distance: 75,
-                  radius: 250,
-                  lineLinked: { opacity: 0.3 },
+                opacity: {
+                  value: 0.7,
+                },
+                shape: {
+                  type: 'circle',
+                },
+                size: {
+                  value: { min: 0.5, max: 1 },
                 },
               },
-            },
-            particles: {
-              color: {
-                value: ['#ffffff', '#007c90'],
-              },
-              links: {
-                color: '#ffffff',
-                distance: 150,
-                enable: false,
-                opacity: 0.3,
-                width: 1,
-              },
-              collisions: {
-                enable: true,
-              },
-              move: {
-                direction: 'none',
-                enable: true,
-                outModes: {
-                  default: 'bounce',
-                },
-                random: true,
-                speed: 0.5,
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                  area: 750,
-                },
-                value: 250,
-              },
-              opacity: {
-                value: 0.7,
-              },
-              shape: {
-                type: 'circle',
-              },
-              size: {
-                value: { min: 0.5, max: 1 },
-              },
-            },
-            detectRetina: true,
-          }}
-        />
+              detectRetina: true,
+            }}
+          />
+        </div>
       </div>
 
       <div css={containerStyle}>

@@ -1,7 +1,7 @@
-import { css } from "@emotion/react";
-import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { css } from '@emotion/react';
+import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 
 const footerContainer = css`
   clip-path: polygon(50% 35%, 100% 0, 100% 100%, 0 100%, 0 0);
@@ -40,7 +40,7 @@ const footerTitle = css`
   letter-spacing: 2px;
   &:before {
     border-bottom: 0.2rem solid #007c90;
-    content: "";
+    content: '';
     top: 4rem;
     width: 18rem;
     position: relative;
@@ -74,8 +74,15 @@ const footerStyle = css`
 `;
 
 const footerText = css`
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family:
+    Menlo,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New,
+    monospace;
   font-size: 0.8rem;
   color: white;
 `;
@@ -90,17 +97,17 @@ const MailTo = ({ mailto, label }) => {
         e.preventDefault;
       }}
     >
-      <a css={linkStyles}>{label}</a>
+      {/* <a css={linkStyles}>{label}</a> */}
     </Link>
   );
 };
 
 const GitHubLink = () => {
   return (
-    <Link href="https://www.github.com/kristencoy" passHref={true}>
-      <a css={linkStyles}>
+    <Link href='https://www.github.com/kristencoy' passHref={true}>
+      {/* <a css={linkStyles}>
         <FaGithub />
-      </a>
+      </a> */}
     </Link>
   );
 };
@@ -111,10 +118,7 @@ export default function FooterContact() {
       <div css={contentCard}>
         <h1 css={footerTitle}>{"Let's connect"}</h1>
         <div css={linksContStyle}>
-          <MailTo
-            label={<HiOutlineMail />}
-            mailto="mailto:kristen@kristencoy.com"
-          />
+          <MailTo label={<HiOutlineMail />} mailto='mailto:kristen@kristencoy.com' />
           <GitHubLink />
         </div>
       </div>
