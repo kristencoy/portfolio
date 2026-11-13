@@ -2,7 +2,7 @@ import dog from '../../../public/dog.png';
 
 export const UpdatedMainContent = () => {
   return (
-    <div style={{ display: 'flex', alignContent: 'center' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', width: '100%', padding: '2rem' }}>
       <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '60%' }}>
         <h1>Hi, I'm Kristen</h1>
         <h3>
@@ -11,7 +11,7 @@ export const UpdatedMainContent = () => {
           on, leaving them behind, neglected in their state of deprecation.
         </h3>
         <h3>While you wait for me to bring things up to date, please enjoy a picture of my dog.</h3>
-        <div style={{ maxWidth: '400px' }}>
+        <div style={{ maxWidth: '500px' }}>
           <img src={dog.src} style={{ height: 'auto', maxWidth: '100%' }}></img>
         </div>
       </div>

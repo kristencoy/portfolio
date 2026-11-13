@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import Particles from 'react-tsparticles';
+// import Particles from 'react-tsparticles';
 import { css, jsx, keyframes } from '@emotion/react';
 import Link from 'next/link';
 // import Navbar from "../src/components/Navbar";
@@ -193,7 +193,7 @@ export default function MainContent() {
           </Link>
         </div>
         <div css={partDivStyle}>
-          <Particles
+          {/* <Particles
             id='tsparticles'
             height='100vh'
             width='100%'
@@ -275,7 +275,7 @@ export default function MainContent() {
               },
               detectRetina: true,
             }}
-          />
+          /> */}
         </div>
       </div>
 
