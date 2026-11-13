@@ -1,4 +1,4 @@
-import dog from '../../../public/dog.png';
+import dog from '../../../public/dog.jpeg';
 
 export const UpdatedMainContent = () => {
   return (
